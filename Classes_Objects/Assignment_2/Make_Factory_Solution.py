@@ -12,7 +12,7 @@ class Worker:
         self.years+=1
 
 # testing above code
-bob=Worker("bob", "builder", 0)
+# bob=Worker("bob", "builder", 0)
 # bob.set_department("construction")
 # bob.increase_tenure()
 # print(bob.department)
@@ -30,10 +30,10 @@ class Item:
             print("Boom!")
 
 # testing above code
-fork=Item("fork", False, 4, 1.0)
+# fork=Item("fork", False, 4, 1.0)
 # fork.explode()
 # print(fork.cost)
-spork=Item("spork", True, 3, 5.0)
+# spork=Item("spork", True, 3, 5.0)
 # spork.explode()
 
 class Factory:
@@ -57,15 +57,16 @@ class Factory:
     def incident(self):
         self.days_since_last_incident=0
 
-acme=Factory([])
-acme.add_worker(bob)
-acme.create_product(fork)
-print(acme.workers)
-print(acme.products)
-acme.ship()
-print(acme.products)
-acme.add_day()
-print(acme.days_since_last_incident)
-acme.incident()
-print(acme.days_since_last_incident)
+# testing above code
+# acme=Factory([])
+# acme.add_worker(bob)
+# acme.create_product(fork)
+# print(acme.workers)
+# print(acme.products)
+# acme.ship()
+# print(acme.products)
+# acme.add_day()
+# print(acme.days_since_last_incident)
+# acme.incident()
+# print(acme.days_since_last_incident)
 
