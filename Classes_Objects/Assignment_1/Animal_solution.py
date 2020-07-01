@@ -9,6 +9,7 @@ class Animal:
 class Tiger(Animal):
     def __init__(self, name, species="tiger"):
         Animal.__init__(self,name, species)
+        # I think this is the shortest way to code this constructuor
     def make_noise(self):
         print("Roar!")
 
