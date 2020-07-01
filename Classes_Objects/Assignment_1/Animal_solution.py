@@ -8,21 +8,18 @@ class Animal:
 
 class Tiger(Animal):
     def __init__(self, name, species="tiger"):
-        self.name=name
-        self.species=species
+        Animal.__init__(self,name, species)
     def make_noise(self):
         print("Roar!")
 
 class Dog(Animal):
     def __init__(self, name, species="dog"):
-        self.name=name
-        self.species=species
+        Animal.__init__(self,name, species)
     def make_noise(self):
         print("Bark!")
 class Cow(Animal):
-    def __init__(self, name):
-        self.name=name
-        self.species="cow"
+    def __init__(self, name, species="cow"):
+        Animal.__init__(self,name, species)
     def make_noise(self):
         print("Moo!")
 
@@ -50,5 +47,6 @@ zoo.add(mike)
 zoo.add(molly)
 zoo.add(bessie)
 zoo.show_animals()
+print(mike.species)
 
 
