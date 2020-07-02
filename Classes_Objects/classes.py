@@ -10,7 +10,7 @@ class Item:
         self.inventory = inventory
         self.category = category
         self.item_id = item_id
-    
+
     def update_inventory(self, quantity=-1):
         # Either sell or re-stock an item, with negative values representing sales
         # and positive representing re-stocking an item
