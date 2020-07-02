@@ -32,8 +32,9 @@ class Account:
             self.save()
 
     def withdraw(self, amount):
+        fee=1.0
         if self.balance >= amount and amount >= 0:
-            self.balance -= amount
+            self.balance -= (amount+fee)
             self.save()
             return True
         return False
