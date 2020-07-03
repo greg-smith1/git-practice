@@ -4,7 +4,13 @@ class Animal:
         self.species = species
         self.noise = noise
         
-    def make_noise(self, noise=None):
+    def __str__(self):
+        if self.name:
+            return f"<{self.name}>"
+        else:
+            return "<>"
+        
+    def make_noise(self):
         return self.noise
 
 class Tiger(Animal):
@@ -20,20 +26,19 @@ class Cow(Animal):
         Animal.__init__(self, name, species, noise)
         
 
-class Zoo:
-    def __init__(self, animals=None):
-        if animals is None:
-            self.animals = []
-        else:
-            self.animals = animals
+class Zoo():
+    def __init__(self):
+        self.animals = []
         
     def add(self, ani):
         if ani not in self.animals:
-            self.animals.append(ani)
-              
+            #self.animals.append((ani))
+            self.animals.append((ani.name, ani.species, ani.noise))
+                         
     def show_animals(self):
         for i in self.animals:
-            print(f'{self.name} is a {self.species}. Noise:{self.make_noise(i)}')
+            print(f'{i[0]} is a {i[1]}.')
+            print(i[2])
 
 tony = Tiger('Tony')
 print(tony.species)
@@ -47,6 +52,7 @@ zoo = Zoo()
 zoo.add(mike)
 zoo.add(molly)
 zoo.add(bessie)
-print(zoo.animals)
+print(zoo.animals[:])
+print(molly)
 
 zoo.show_animals()
